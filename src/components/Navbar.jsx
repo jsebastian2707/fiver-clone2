@@ -12,10 +12,11 @@
       DropdownMenuTrigger,
     } from '@/components/ui/dropdown-menu.jsx';
     import { LogIn, LogOut, User, Briefcase, LayoutDashboard, Search, Home } from 'lucide-react';
-    import { useAuth } from '@/hooks/useAuth.jsx';
+    //import { useAuth } from '@/hooks/useAuth.jsx';
 
     const Navbar = () => {
-      const { user, logout } = useAuth();
+      //const { user, logout } = useAuth();
+      const user = null;
       const navigate = useNavigate();
 
       const handleLogout = () => {
