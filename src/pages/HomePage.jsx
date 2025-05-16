@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "@radix-ui/themes";
 import { motion } from 'framer-motion';
 import { useNavigate } from "react-router";
