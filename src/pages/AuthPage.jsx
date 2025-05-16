@@ -33,9 +33,15 @@ const AuthPage = () => {
       }
       //navigate('/profile');
     } catch (error) {
-      toast.error("Error al iniciar sesión", {
-        description: error.message,
-      });
+      if (isLogin) {
+        toast.error("Error al iniciar sesión", {
+          description: error.message,
+        });
+      } else {
+        toast.error("Error al registrarse", {
+          description: error.message,
+        });
+      }
     }
   };
 
