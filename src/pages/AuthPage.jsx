@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { useNavigate } from 'react-router';
 import { Mail, Lock, User, LogIn, UserPlus } from 'lucide-react';
 import { useAuth } from '@/context/userContext.jsx';
+import { toast } from 'sonner';
 
 const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -21,14 +22,20 @@ const AuthPage = () => {
     try {
       if (isLogin) {
         await login({ email, password });
-        toast({ title: "Inicio de sesión exitoso", description: "Bienvenido de nuevo!" });
+        toast.success("Inicio de sesión exitoso", {
+          description: "Bienvenido de nuevo",
+        });
       } else {
         await register({ email, password });
-        toast({ title: "Registro exitoso", description: "Tu cuenta ha sido creada. Revisa tu correo para confirmar." });
+        toast.success("Registro exitoso", {
+          description: "Tu cuenta ha sido creada. Revisa tu correo para confirmar.",
+        });
       }
-      navigate('/profile');
+      //navigate('/profile');
     } catch (error) {
-      toast({ variant: "destructive", title: "Error", description: error.message });
+      toast.error("Error al iniciar sesión", {
+        description: error.message,
+      });
     }
   };
 
