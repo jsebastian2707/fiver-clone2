@@ -119,7 +119,7 @@
                   <Card className="h-full flex flex-col overflow-hidden glassmorphism border-purple-500/50 shadow-lg hover:shadow-purple-500/30 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
                     <div className="relative h-56 w-full">
                       <img  
-                        class="absolute inset-0 w-full h-full object-cover" 
+                        className="absolute inset-0 w-full h-full object-cover" 
                         alt={service.name}
                        src="https://images.unsplash.com/photo-1690721606848-ac5bdcde45ea" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>

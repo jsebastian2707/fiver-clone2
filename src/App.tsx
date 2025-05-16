@@ -9,7 +9,7 @@ import ServicesListPage from "./pages/ServicesListPage";
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import { Toaster } from 'sonner';
 function App() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-gray-100">
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route index element={<HomePage />} />
             <Route path="auth" element={<AuthPage />} />
-            <Route
+            {/* <Route
               path="profile"
               element={
                 <ProtectedRoute>
@@ -36,11 +36,12 @@ function App() {
                   <AdminDashboardPage />
                 </ProtectedRoute>
               }
-            />
+            /> */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
         <Footer />
+        <Toaster />
       </UserProvider>
     </div>
   );

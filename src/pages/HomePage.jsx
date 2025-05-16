@@ -110,7 +110,7 @@ const HomePage = () => {
           ¿Listo para empezar?
         </h2>
         <img
-          class="w-full max-w-4xl mx-auto rounded-lg shadow-2xl mb-8"
+          className="w-full max-w-4xl mx-auto rounded-lg shadow-2xl mb-8"
           alt="Collage de profesionales trabajando"
           src="https://images.unsplash.com/photo-1492448497576-45b1efcdc02c"
         />

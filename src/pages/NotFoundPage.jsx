@@ -1,8 +1,8 @@
 
     import React from 'react';
     import { motion } from 'framer-motion';
-    import { Button } from '@/components/ui/button.jsx';
-    import { Link } from 'react-router-dom';
+    import { Button } from '@radix-ui/themes';
+    import { Link } from 'react-router';
     import { AlertTriangle, Home } from 'lucide-react';
 
     const NotFoundPage = () => {

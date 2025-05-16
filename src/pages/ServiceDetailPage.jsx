@@ -91,7 +91,7 @@
             <div className="md:flex">
               <div className="md:w-1/2 relative">
                 <img  
-                  class="w-full h-64 md:h-full object-cover" 
+                  className="w-full h-64 md:h-full object-cover" 
                   alt={service.name}
                  src="https://images.unsplash.com/photo-1695965225979-e0b585d302df" />
                 <div className="absolute top-4 left-4 bg-purple-600/80 text-yellow-300 px-3 py-1 rounded-full text-sm font-semibold flex items-center">
