@@ -8,8 +8,8 @@ export function UserProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      setUser(user);
+    supabase.auth.getUser().then(({ data }) => {
+      setUser(data.user);
       setLoading(false);
     });
 
@@ -26,6 +26,27 @@ export function UserProvider({ children }) {
     </UserContext.Provider>
   );
 }
+
+export const useAuth = () => {
+  const { user, loading } = useUser();
+
+  const login = async ({ email, password }) => {
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) throw error;
+  };
+
+  const register = async ({ email, password }) => {
+    const { error } = await supabase.auth.signUp({ email, password });
+    if (error) throw error;
+  };
+
+  const signOut = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) throw error;
+  };
+
+  return { user, loading, login, register, signOut };
+};
 
 export function useUser() {
   return useContext(UserContext);
