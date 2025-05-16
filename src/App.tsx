@@ -1,10 +1,10 @@
 import './App.css'
 import { Routes, Route } from 'react-router';
-import AuthPage from '.pages/AuthPage';
-import NotFoundPage from '.pages/NotFoundPage';
-import ProfilePage from '.pages/ProfilePage';
-import ServiceDetailPage from '.pages/ServiceDetailPage';
-import ServicesListPage from '.pages/ServicesListPage';
+import AuthPage from './pages/AuthPage';
+import NotFoundPage from './pages /pages/NotFoundPage';
+import ProfilePage from './pages/ProfilePage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
+import ServicesListPage from './pages/ServicesListPage';
 import  HomePage  from './pages/HomePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
