@@ -19,14 +19,8 @@ function App() {
           <Routes>
             <Route index element={<HomePage />} />
             <Route path="auth" element={<AuthPage />} />
-            {/* <Route
-              path="profile"
-              element={
-                <ProtectedRoute>
-                  <ProfilePage />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="profile" element={ <ProfilePage /> }/>
+            {/*
             <Route path="services" element={<ServicesListPage />} />
             <Route path="services/:id" element={<ServiceDetailPage />} />
             <Route
