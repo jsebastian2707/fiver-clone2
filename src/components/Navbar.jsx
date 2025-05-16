@@ -22,11 +22,11 @@ import {
 import { useAuth } from "@/context/userContext.jsx";
 
 const Navbar = () => {
-  const { user, logout } = useAuth();
+  const { user, signOut } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout();
+    signOut();
     navigate("/");
   };
 

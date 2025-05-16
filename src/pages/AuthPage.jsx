@@ -97,7 +97,7 @@ const AuthPage = () => {
                 <Label htmlFor="password" className="text-indigo-100 flex items-center">
                   <Lock className="mr-2 h-4 w-4 text-purple-400" /> Contraseña
                 </Label>
-                <input 
+                <Input 
                   id="password" 
                   type="password" 
                   placeholder="••••••••" 
