@@ -1,9 +1,8 @@
 
     import React from 'react';
-    import { Link, useNavigate } from 'react-router-dom';
+    import { Link, useNavigate } from 'react-router';
     import { motion } from 'framer-motion';
-    import { Button } from '@/components/ui/button.jsx';
-    import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar.jsx';
+    import { Button, Avatar} from '@radix-ui/themes';
     import {
       DropdownMenu,
       DropdownMenuContent,
@@ -51,12 +50,10 @@
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Avatar className="cursor-pointer h-10 w-10 border-2 border-yellow-400">
-                          <AvatarImage src={user.avatarUrl || ''} alt={user.name || 'Usuario'} />
-                          <AvatarFallback className="bg-indigo-700 text-yellow-400">
-                            {user.email ? user.email[0].toUpperCase() : 'U'}
-                          </AvatarFallback>
-                        </Avatar>
+                        <Avatar className="cursor-pointer h-10 w-10 border-2 border-yellow-400"
+                          src={user.avatarUrl || ''}
+                          fallback={user.email ? user.email[0].toUpperCase() : 'U'}
+                        />
                       </motion.div>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56 mr-4 mt-2 glassmorphism border-purple-400">
